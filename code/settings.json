@@ -1,0 +1,87 @@
+{
+  "markdown-pdf.convertOnSaveExclude" : [
+    "README.md",
+    "README.MD"
+  ],
+  "workbench.editorAssociations": {
+    "*.md": "default",
+    "*.csv": "default"
+  },
+  "gitlens.views.fileHistory.location" : "gitlens",
+  "editor.suggestSelection" : "first",
+  "workbench.colorTheme" : "Nord",
+  "gitlens.views.lineHistory.location" : "gitlens",
+  "python.jediEnabled" : false,
+  "latex-workshop.latex.tools": [{
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+    ]
+    },
+    {
+      "name" : "pdflatex",
+      "command" : "pdflatex",
+      "args" : [
+        "--shell-escape",
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name" : "bibtex",
+      "command" : "bibtex",
+      "args" : [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "vsintellicode.modify.editor.suggestSelection" : "automaticallyOverrodeDefaultValue",
+  "markdown-pdf.headerTemplate" : "<div style=\"font-size: 0px; margin-left: 1cm;\"> <span class='title'><\/span><\/div> <div style=\"font-size: 0px; margin-left: auto; margin-right: 1cm; \"> <span class='date'><\/span><\/div>",
+  "explorer.confirmDelete" : false,
+  "gitlens.views.compare.location" : "gitlens",
+  "sync.gist" : "88edaa0f89226a0664b94cd4008f57c1",
+  "mesonbuild.configureOnOpen" : true,
+  "terminal.integrated.env.osx" : {
+    "FIG_NEW_SESSION": "1"
+  },
+  "redhat.telemetry.enabled" : true,
+  "markdown-pdf.highlightStyle" : "a11y-light.css",
+  "gitlens.views.search.location" : "gitlens",
+  "markdown-pdf.footerTemplate" : "<div style=\"font-size: 10px; margin: 0 auto;\"> <span class='pageNumber'><\/span> \/ <span class='totalPages'><\/span><\/div>",
+  "editor.fontFamily" : "Comic Code",
+  "gitlens.views.repositories.location" : "gitlens",
+  "editor.accessibilitySupport" : "off",
+  "markdown-pdf.scale": 1.075,
+  "liveServer.settings.donotShowInfoMsg" : true,
+  "workbench.iconTheme" : "material-icon-theme",
+  "markdown-pdf.breaks" : true,
+  "latex-workshop.chktex.enabled": true,
+  "jupyter.diagnostics.reservedPythonNames.enabled": false,
+  "tabnine.experimentalAutoImports": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "jupyter.askForKernelRestart": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "ansible.python.interpreterPath": "/usr/bin/python3",
+  "powermode.enabled": true,
+  "powermode.presets": "fireworks",
+  "powermode.combo.timerEnabled": "show",
+  "powermode.shake.intensity": 10,
+  "latex-workshop.latex.magic.args": [
+    "-xelatex",
+    "-synctex=1",
+    "-interaction=nonstopmode",
+    "-file-line-error",
+    "%DOC%"
+  ],
+}
