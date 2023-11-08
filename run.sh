@@ -1,7 +1,7 @@
 printf "[>] overwrite zshrc? (y/n):  "
 read order
 if [ $order == "y" ] ; then
-    cp .zshrc ~/.zshrc
+    cp shell/.zshrc ~/.zshrc
 fi
 
 echo "[*] install brew"
@@ -18,7 +18,7 @@ echo "[*] install brew casks"
 cat brew/brew_casks.txt | xargs brew install --cask
 
 echo "[*] copy vscode settings & install extensions"
-cp code/settings.json $HOME/Library/Application\ Support/VSCodium/User/settings.json
+cp code/settings.json ~/Library/Application\ Support/VSCodium/User/settings.json
 cat code/code_extensions.txt | xargs codium --install-extension
 
 echo "[*] install/setup node & bun"
@@ -26,11 +26,14 @@ nvm install 18 && nvm use 18
 
 curl -fsSL https://bun.sh/install | bash
 
-echo "[*] install spaceship prompt"
-npm install -g spaceship-prompt
+echo "[*] install starship prompt"
+curl -sS https://starship.rs/install.sh | sh
+mkdir -p ~/.config && cp shell/starship.toml ~/.config/starship.toml
 
-printf "[>] install fonts? (y/n):  "
-read order
-if [ $order == "y" ] ; then
-    cp $HOME/Documents/Documents/fonts/* /Library/Fonts/
+printf "[>] install fonts"
+if [ -d "/Users/david/Documents/Documents/fonts" ]; then
+    cp /Users/david/Documents/Documents/fonts/* /Library/Fonts/
 fi
+
+echo "[*] etc"
+touch ~/.hushlogin
