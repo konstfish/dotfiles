@@ -35,6 +35,8 @@ lsusb
 lua@5.3
 mkcert
 mosh
+nano
+nanorc
 neofetch
 nmap
 nss

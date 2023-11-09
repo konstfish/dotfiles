@@ -28,7 +28,30 @@ curl -fsSL https://bun.sh/install | bash
 
 echo "[*] install starship prompt"
 curl -sS https://starship.rs/install.sh | sh
-mkdir -p ~/.config && cp shell/starship.toml ~/.config/starship.toml
+mkdir -p ~/.config && cp shell/.config/starship.toml ~/.config/starship.toml
+
+echo "[*] setup .config"
+cp -r shell/.config/neofetch ~/.config/neofetch
+
+cp shell/.gitconfig ~/.gitconfig
+
+echo "[*] setup .ssh"
+mkdir -p ~/.ssh && cp shell/.ssh/config ~/.ssh/config
+cp /Users/david/Documents/Documents/keys/* ~/.ssh/
+chmod 600 ~/.ssh/*
+
+echo "[*] setup nano"
+cp shell/.nanorc ~/.nanorc
+curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
+echo "[*] setup iterm2"
+if ! [ -f ~/Documents/Configuration/com.googlecode.iterm2.plist ]; then
+  mkdir -p ~/Documents/Configuration/
+  cp shell/com.googlecode.iterm2.plist ~/Documents/Configuration/com.googlecode.iterm2.plist
+fi
+
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Documents/Configuration/"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 printf "[>] install fonts"
 if [ -d "/Users/david/Documents/Documents/fonts" ]; then

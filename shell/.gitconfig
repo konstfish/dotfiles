@@ -1,6 +1,7 @@
 [user]
 	email = david@konst.fish
 	name = David Fischer
+	signingkey = F21F2016DEFEC73D
 [init]
 	defaultBranch = main
 [filter "lfs"]
@@ -8,3 +9,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[commit]
+	gpgsign = true
