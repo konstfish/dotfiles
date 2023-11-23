@@ -12,5 +12,13 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+function obsidian(){
+       cd "/Users/david/Library/Mobile Documents/iCloud~md~obsidian/Documents/konstfish/.obsidian/"
+       git add -A
+       git commit -m "$@"
+       git push
+       cd ~
+}
+
 alias nano="nano -x"
 alias gitignore="echo '.DS_Store\n' > .gitignore"

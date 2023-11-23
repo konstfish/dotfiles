@@ -32,6 +32,7 @@ wireshark
 balenaetcher
 disk-inventory-x
 latexit
+lm-studio
 postman
 sherlock
 ultimaker-cura

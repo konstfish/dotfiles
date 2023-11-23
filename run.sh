@@ -60,3 +60,6 @@ fi
 
 echo "[*] etc"
 touch ~/.hushlogin
+
+echo "[!] done"
+echo "todo: setup wakatime, raycast, iterm2"
