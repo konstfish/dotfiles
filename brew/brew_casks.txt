@@ -1,4 +1,5 @@
 alfred
+bartender
 checkra1n
 fig
 google-chrome
@@ -7,6 +8,7 @@ qbittorrent
 slack
 vlc
 arduino
+clop
 coconutbattery
 gimp
 imageoptim
@@ -19,18 +21,22 @@ db-browser-for-sqlite
 inkscape
 openemu
 raycast
+topnotch
 tor-browser
 whisky
 audacity
 discord
 gitkraken
 iterm2
+orbstack
 orion
 rsyncui
+syntax-highlight
 ubersicht
 wireshark
 balenaetcher
 disk-inventory-x
+lastfm
 latexit
 lm-studio
 postman

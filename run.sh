@@ -53,10 +53,33 @@ fi
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Documents/Configuration/"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
-printf "[>] install fonts"
+echo "[*] copy preferences"
+cp prefernces/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
+
+
+echo "[*] install fonts"
 if [ -d "/Users/david/Documents/Documents/fonts" ]; then
     cp /Users/david/Documents/Documents/fonts/* /Library/Fonts/
 fi
+
+echo "[*] macos defaults"
+defaults write com.apple.dock "tilesize" -int "42"
+defaults write com.apple.dock "autohide" -bool "true"
+
+killall Dock
+
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool "true"
+
+defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "true"
+defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
+
+killall Finder
+
+osascript -e 'tell application "Finder" to set desktop picture to "/Users/david/Documents/Wallpaper/-zgH.png" as POSIX file'
 
 echo "[*] etc"
 touch ~/.hushlogin
