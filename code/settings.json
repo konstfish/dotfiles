@@ -3,11 +3,13 @@
   "editor.fontFamily": "Comic Code",
   "workbench.iconTheme": "material-icon-theme",
   "http.proxyStrictSSL": false,
-  "go.lintOnSave": "off",
   "redhat.telemetry.enabled": true,
   "terminal.integrated.env.osx": {
       "FIG_NEW_SESSION": "1"
   },
+  "git.autofetch": true,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
   /*"github.copilot.advanced": {
       "debug.overrideEngine": "codegen",
       "debug.overrideProxyUrl": "http://127.0.0.1:8080",

@@ -22,3 +22,5 @@ function obsidian(){
 
 alias nano="nano -x"
 alias gitignore="echo '.DS_Store\n' > .gitignore"
+
+eval "$(starship init zsh)"

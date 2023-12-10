@@ -47,7 +47,7 @@ curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 echo "[*] setup iterm2"
 if ! [ -f ~/Documents/Configuration/com.googlecode.iterm2.plist ]; then
   mkdir -p ~/Documents/Configuration/
-  cp shell/com.googlecode.iterm2.plist ~/Documents/Configuration/com.googlecode.iterm2.plist
+  cp preferences/com.googlecode.iterm2.plist ~/Documents/Configuration/com.googlecode.iterm2.plist
 fi
 
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Documents/Configuration/"
