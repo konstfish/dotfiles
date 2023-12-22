@@ -3,6 +3,7 @@ bartender
 checkra1n
 fig
 google-chrome
+insomnia
 moom
 qbittorrent
 slack
