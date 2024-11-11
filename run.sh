@@ -34,6 +34,8 @@ echo "[*] setup .config"
 cp -r shell/.config/neofetch ~/.config/neofetch
 
 cp shell/.gitconfig ~/.gitconfig
+cp shell/.gitignore ~/.gitignore
+cp -r shell/.git-templates ~/.git-templates
 
 echo "[*] setup .ssh"
 mkdir -p ~/.ssh && cp shell/.ssh/config ~/.ssh/config

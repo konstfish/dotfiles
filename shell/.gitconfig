@@ -4,6 +4,7 @@
 	signingkey = F21F2016DEFEC73D
 [init]
 	defaultBranch = main
+	templatedir = ~/.git-templates
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -11,3 +12,5 @@
 	process = git-lfs filter-process
 [commit]
 	gpgsign = true
+[core]
+	excludesFile = ~/.gitignore

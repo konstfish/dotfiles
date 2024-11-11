@@ -33,6 +33,7 @@ libsmi
 llm
 lsusb
 lua@5.3
+lucky-commit
 mkcert
 mosh
 nano
