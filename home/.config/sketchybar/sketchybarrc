@@ -8,10 +8,10 @@ ITEM_DIR="$CONFIG_DIR/items"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top height=30 y_offset=-34 blur_radius=30 color=0x40000000
+sketchybar --bar position=top height=34 y_offset=0 blur_radius=30 color=0x40000000
 
-LABEL_FONT="SF Pro Text:Regular:12.0"
-ICON_FONT="SF Pro Text:Regular:10.0"
+LABEL_FONT="Comic Code:Regular:12.0"
+ICON_FONT="Comic Code:Regular:10.0"
 
 default=(
   padding_left=5

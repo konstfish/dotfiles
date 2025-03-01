@@ -3,13 +3,44 @@
   "editor.fontFamily": "Comic Code",
   "workbench.iconTheme": "material-icon-theme",
   "http.proxyStrictSSL": false,
-  "redhat.telemetry.enabled": true,
-  "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
-  },
+  "redhat.telemetry.enabled": false,
+  "go.lintOnSave": "off",
   "git.autofetch": true,
   "explorer.confirmDelete": false,
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "explorer.compactFolders": false,
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "hediet.vscode-drawio.resizeImages": null,
+  "go.toolsManagement.autoUpdate": true,
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "python.languageServer": "Jedi",
+  "vs-kubernetes": {
+      "vs-kubernetes.ignore-recommendations": true,
+      "vs-kubernetes.crd-code-completion": "disabled"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.openRepositoryInParentFolders": "always",
+  "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.location": "top",
   /*"github.copilot.advanced": {
       "debug.overrideEngine": "codegen",
       "debug.overrideProxyUrl": "http://127.0.0.1:8080",

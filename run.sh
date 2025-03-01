@@ -1,8 +1,5 @@
-printf "[>] overwrite zshrc? (y/n):  "
-read order
-if [ $order == "y" ] ; then
-    cp shell/.zshrc ~/.zshrc
-fi
+printf "[!] this script relies heavily on icloud content being there"
+read confirm
 
 echo "[*] install brew"
 if command -v brew &>/dev/null ; then
@@ -22,46 +19,32 @@ cp code/settings.json ~/Library/Application\ Support/VSCodium/User/settings.json
 cat code/code_extensions.txt | xargs codium --install-extension
 
 echo "[*] install/setup node & bun"
-nvm install 18 && nvm use 18
+nvm install 22 && nvm use 22
 
 curl -fsSL https://bun.sh/install | bash
-
-echo "[*] install starship prompt"
-curl -sS https://starship.rs/install.sh | sh
-mkdir -p ~/.config && cp shell/.config/starship.toml ~/.config/starship.toml
-
-echo "[*] setup .config"
-cp -r shell/.config/neofetch ~/.config/neofetch
-
-cp shell/.gitconfig ~/.gitconfig
-cp shell/.gitignore ~/.gitignore
-cp -r shell/.git-templates ~/.git-templates
-
-echo "[*] setup .ssh"
-mkdir -p ~/.ssh && cp shell/.ssh/config ~/.ssh/config
-cp /Users/david/Documents/Documents/keys/* ~/.ssh/
-chmod 600 ~/.ssh/*
-
-echo "[*] setup nano"
-cp shell/.nanorc ~/.nanorc
-curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
-
-echo "[*] setup iterm2"
-if ! [ -f ~/Documents/Configuration/com.googlecode.iterm2.plist ]; then
-  mkdir -p ~/Documents/Configuration/
-  cp preferences/com.googlecode.iterm2.plist ~/Documents/Configuration/com.googlecode.iterm2.plist
-fi
-
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Documents/Configuration/"
-defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-echo "[*] copy preferences"
-cp prefernces/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
 
 echo "[*] install uv"
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-uv tool install --python 3.12 posting
+echo "[*] install starship prompt"
+curl -sS https://starship.rs/install.sh | sh
+
+echo "[*] setup home folder"
+cp -r home/* ~/
+
+echo "[*] setup .ssh"
+cp /Users/david/Documents/Documents/keys/* ~/.ssh/
+chmod 600 ~/.ssh/*
+
+echo "[*] setup nano"
+curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
+echo "[*] setup iterm2"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.config/iterm2/"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+echo "[*] copy preferences"
+cp prefernces/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
 
 echo "[*] install fonts"
 if [ -d "/Users/david/Documents/Documents/fonts" ]; then
@@ -72,23 +55,34 @@ echo "[*] macos defaults"
 defaults write com.apple.dock "tilesize" -int "42"
 defaults write com.apple.dock "autohide" -bool "true"
 
-killall Dock
-
 defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
 defaults write com.apple.finder "ShowPathbar" -bool "true"
 defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool "true"
+defaults write com.apple.dock mru-spaces -bool "false"
 
+killall Dock
+
+defaults write NSGlobalDomain _HIHideMenuBar -bool "true"
 defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "true"
 defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
 
+osascript -e 'tell application "Finder" to set desktop picture to "/Users/david/Documents/Wallpaper/-zgH.png" as POSIX file'
+
 killall Finder
 
-osascript -e 'tell application "Finder" to set desktop picture to "/Users/david/Documents/Wallpaper/-zgH.png" as POSIX file'
+echo "[*] yabai/skhd/sketchybar"
+
+cp shell/.skhdrc ~/.skhdrc
+skhd --install-service
+
+cp shell/.yabairc ~/.yabairc
+yabai --install-service
+
+brew services start sketchybar
 
 echo "[*] etc"
 touch ~/.hushlogin
 
-echo "[!] done"
-echo "todo: setup wakatime, raycast, iterm2"
+echo "[!] done, goodbye"

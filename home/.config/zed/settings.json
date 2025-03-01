@@ -1,0 +1,45 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim_mode": false,
+  "ui_font_size": 15,
+  "buffer_font_size": 12,
+  "buffer_font_family": "Comic Code",
+  "theme": {
+    "mode": "system",
+    "light": "Nord Light",
+    "dark": "Nord"
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "format_on_save": "on",
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "o1"
+    },
+    "version": "2"
+  },
+  "language_overrides": {
+    "Go": {
+      "format_on_save": {
+        "external": {
+          "command": "goimports",
+          "arguments": []
+        }
+      }
+    }
+  }
+}
