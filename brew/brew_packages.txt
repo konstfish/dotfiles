@@ -14,6 +14,8 @@ curl
 datasette
 docker
 docker-compose
+FelixKratz/formulae/sketchybar
+FelixKratz/formulae/borders
 gnu-tar
 go
 grpc-swift
@@ -24,6 +26,8 @@ htop
 iproute2mac
 jadx
 jq
+koekeishiya/formulae/yabai
+koekeishiya/formulae/skhd
 ktr0731/evans/evans
 kubectx
 libffi

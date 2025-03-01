@@ -58,6 +58,10 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 echo "[*] copy preferences"
 cp prefernces/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
 
+echo "[*] install uv"
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+uv tool install --python 3.12 posting
 
 echo "[*] install fonts"
 if [ -d "/Users/david/Documents/Documents/fonts" ]; then
