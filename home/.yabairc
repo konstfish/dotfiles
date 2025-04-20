@@ -5,7 +5,7 @@ sudo yabai --load-sa
 # only manage the first three spaces
 yabai -m config layout float
 
-for space in 1 2 3; do
+for space in 1 2 3 4; do
   yabai -m config --space $space layout bsp
 done
 
@@ -33,9 +33,9 @@ yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
 # disable fullscreen if focus changes
-yabai -m signal --add event=window_focused action="\
-    yabai -m query --windows --space | \
-    jq '.[] | select(.id != env.YABAI_WINDOW_ID and .\"has-fullscreen-zoom\" == true) | .id' | \
-    xargs -I{} yabai -m window {} --toggle zoom-fullscreen"
+#yabai -m signal --add event=window_focused action="\
+#    yabai -m query --windows --space | \
+#    jq '.[] | select(.id != env.YABAI_WINDOW_ID and .\"has-fullscreen-zoom\" == true) | .id' | \
+#    xargs -I{} yabai -m window {} --toggle zoom-fullscreen"
 
 #borders active_color=0xFF5e81ac inactive_color=0x4081a1c1 width=2.0 &

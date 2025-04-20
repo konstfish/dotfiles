@@ -10,6 +10,6 @@ cmd - 3 : yabai -m query --windows --window | grep -q '"has-parent-zoom":true' &
          yabai -m window --toggle zoom-fullscreen; \
          yabai -m window --warp east
 
-cmd + shift - 2 : yabai -m window --space prev --focus
+cmd + shift - 1 : yabai -m window --space prev --focus
 
-cmd + shift - 3 : yabai -m window --space next --focus
+cmd + shift - 2 : yabai -m window --space next --focus
