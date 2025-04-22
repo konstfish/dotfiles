@@ -21,6 +21,11 @@ function obsidian(){
 }
 
 alias nano="nano -x"
-alias gitignore="echo '.DS_Store\n' > .gitignore"
+alias k="kubectl"
+alias tf="terraform"
 
 eval "$(starship init zsh)"
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+       exec tmux
+fi

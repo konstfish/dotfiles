@@ -1,6 +1,8 @@
 font-family = "BerkeleyMonoNerdFont-Regular"
 font-size = 11
 
+cursor-style=bar
+
 theme = nord
 
 window-padding-x = 4
@@ -22,3 +24,4 @@ keybind = global:opt+space=toggle_quick_terminal
 keybind = cmd+t=text:\x02c
 keybind = cmd+left=text:\x02p
 keybind = cmd+right=text:\x02n
+keybind = cmd+f=text:\x02[?
